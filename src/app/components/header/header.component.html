@@ -2,4 +2,9 @@
     <div class="logo">
         <a routerLinkActive="active" routerLink="/">Internationalization</a>
     </div>
+
+    <div class="theme-toggle-button" (click)="themeService.toggleTheme()">
+        <icon-dark-mode class="icon" *ngIf="themeService.theme === Theme.LIGHT"></icon-dark-mode>
+        <icon-light-mode class="icon" *ngIf="themeService.theme === Theme.DARK"></icon-light-mode>
+    </div>
 </header>

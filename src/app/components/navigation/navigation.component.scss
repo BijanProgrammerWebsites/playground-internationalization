@@ -1,0 +1,36 @@
+aside {
+    height: 100%;
+
+    padding-block: var(--shell--padding);
+    padding-inline-end: var(--shell--padding);
+
+    border-right: 1px solid var(--color--separator);
+
+    user-select: none;
+
+    nav {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            li {
+                a {
+                    background-color: var(--color--nav-link-background);
+                    color: var(--color--nav-link-foreground);
+
+                    font-size: 1.6rem;
+
+                    &:hover {
+                        border-bottom: 1px solid currentColor;
+                    }
+
+                    &.active {
+                        background-color: var(--color--nav-link-background--active);
+                        color: var(--color--nav-link-foreground--active);
+                    }
+                }
+            }
+        }
+    }
+}

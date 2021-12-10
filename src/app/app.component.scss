@@ -1,0 +1,24 @@
+#app {
+    display: grid;
+    grid-template-areas: 'header header' 'navigation main';
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    app-header {
+        grid-area: header;
+    }
+
+    app-navigation {
+        grid-area: navigation;
+    }
+
+    main {
+        grid-area: main;
+
+        padding: var(--shell--padding);
+    }
+}

@@ -80,7 +80,8 @@
     --color--popper-background: hsl(0, 0%, 20%);
     --color--popper-foreground: var(--color--default-background);
 
-    --box-shadow--subtle: 0 0.2rem 0.5rem 0 hsla(0, 0%, 10%, 12%);
+    --color--box-shadow--subtle: hsla(0, 0%, 10%, 12%);
+    --box-shadow--subtle: 0 0.2rem 0.5rem 0 var(--color--box-shadow--subtle);
 
     --full-width: 120rem;
     --full-width-padding-inline: calc(max(100% - var(--full-width), 4rem) / 2);
@@ -93,7 +94,13 @@
 
     &.theme--dark {
         --color--default-background: hsl(0, 0%, 10%);
-        --color--default-foreground: hsl(0, 0%, 98%);
+        --color--default-foreground: hsl(0, 0%, 90%);
+
+        --color--primary: hsl(var(--primary-hue), 100%, 70%);
+
+        --color--border--fade: hsl(0, 0%, 30%);
+
+        --color--box-shadow--subtle: hsla(0, 0%, 0%, 50%);
     }
 }
 

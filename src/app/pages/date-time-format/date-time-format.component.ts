@@ -1,10 +1,5 @@
 import {Component} from '@angular/core';
-
-interface Card {
-    key: string;
-    variants: any[];
-    staticOptions?: any;
-}
+import {VariantCard} from 'src/app/models/variant-card';
 
 @Component({
     selector: 'app-date-time-format',
@@ -30,7 +25,7 @@ export class DateTimeFormatComponent {
     public faFormatToParts = new Intl.DateTimeFormat('fa').formatToParts(this.original);
 
     // ----------------------------------------------------------------------------------------------------------- cards
-    public cards: Card[] = [
+    public cards: VariantCard[] = [
         {
             key: 'dateStyle',
             variants: ['short', 'medium', 'long', 'full'],
@@ -89,7 +84,7 @@ export class DateTimeFormatComponent {
         },
     ];
 
-    public format(locales: string | string[], card: Card, variant: string): string {
+    public format(locales: string | string[], card: VariantCard, variant: string): string {
         const optionsObject: any = {
             ...(card.staticOptions ?? {}),
             [card.key]: variant,

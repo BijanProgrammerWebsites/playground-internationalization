@@ -1,0 +1,17 @@
+<section class="card">
+    <header>
+        <h2>{{ card.key }}</h2>
+    </header>
+
+    <main>
+        <table class="table table--horizontal">
+            <tr *ngFor="let variant of card.variants">
+                <th>{{ variant }}</th>
+                <td>{{ format('en', card, variant) }}</td>
+                <td dir="rtl">{{ format('fa', card, variant) }}</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>{{ card.footnote }}</footer>
+</section>

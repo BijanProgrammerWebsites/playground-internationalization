@@ -7,6 +7,7 @@ import {DateTimeFormatComponent} from './date-time-format/date-time-format.compo
 import {ListFormatComponent} from './list-format/list-format.component';
 import {ComponentsModule} from '../components/components.module';
 import {NumberFormatComponent} from './number-format/number-format.component';
+import {RelativeTimeFormatComponent} from './relative-time-format/relative-time-format.component';
 
 @NgModule({
     declarations: [
@@ -15,6 +16,7 @@ import {NumberFormatComponent} from './number-format/number-format.component';
         DateTimeFormatComponent,
         ListFormatComponent,
         NumberFormatComponent,
+        RelativeTimeFormatComponent,
     ],
     imports: [CommonModule, PipesModule, ComponentsModule],
 })

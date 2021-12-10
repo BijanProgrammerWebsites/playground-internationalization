@@ -13,10 +13,10 @@ export class ThemeService {
 
     public constructor() {
         const isDarkTheme = localStorage.getItem(ThemeService.DARK_THEME_LOCALSTORAGE_KEY);
-        this.theme = !!isDarkTheme && isDarkTheme === 'true' ? Theme.DARK : Theme.LIGHT;
+        this.theme = !isDarkTheme || isDarkTheme === 'true' ? Theme.DARK : Theme.LIGHT;
     }
 
-    private _theme: Theme = Theme.LIGHT;
+    private _theme: Theme = Theme.DARK;
 
     public get theme(): Theme {
         return this._theme;

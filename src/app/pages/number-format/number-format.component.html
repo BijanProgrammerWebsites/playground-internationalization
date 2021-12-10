@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <h1>NumberFormat</h1>
+
+    <section class="card">
+        <header>
+            <h2>new Intl.NumberFormat(locales, options)</h2>
+        </header>
+
+        <main>
+            <table class="table table--horizontal">
+                <tr>
+                    <th>original</th>
+                    <td colspan="2">{{ original }}</td>
+                </tr>
+
+                <tr>
+                    <th>default</th>
+                    <td>{{ enDefault }}</td>
+                    <td dir="rtl">{{ faDefault }}</td>
+                </tr>
+            </table>
+        </main>
+    </section>
+
+    <app-variant-card *ngFor="let card of cards" [card]="card" [format]="format.bind(this)"></app-variant-card>
+</div>

@@ -28,7 +28,7 @@ export class ListFormatComponent {
             staticOptions: {
                 type: 'unit',
             },
-            footnote: 'The "type" option has been set to "unit".',
+            footnotes: ['The "type" option has been set to "unit".'],
         },
         {
             key: 'style',

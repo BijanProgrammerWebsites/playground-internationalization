@@ -13,5 +13,9 @@
         </table>
     </main>
 
-    <footer>{{ card.footnote }}</footer>
+    <footer>
+        <ul>
+            <li *ngFor="let footnote of card.footnotes">{{ footnote }}</li>
+        </ul>
+    </footer>
 </section>

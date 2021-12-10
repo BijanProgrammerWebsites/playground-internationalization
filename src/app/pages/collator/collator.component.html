@@ -1,1 +1,22 @@
-<p>collator works!</p>
+<div class="wrapper">
+    <h1>Collator</h1>
+
+    <section class="card">
+        <header>
+            <h2>new Intl.Collator('fa').compare</h2>
+        </header>
+
+        <main>
+            <table class="table table--horizontal">
+                <tr>
+                    <th>original</th>
+                    <td dir="rtl">{{ original | list }}</td>
+                </tr>
+                <tr>
+                    <th>Sorted</th>
+                    <td dir="rtl">{{ sorted | list }}</td>
+                </tr>
+            </table>
+        </main>
+    </section>
+</div>
